@@ -1,0 +1,32 @@
+制作nginx的rpm包
+
+环境：centos6系统
+
+第一步：安装软件
+[master@rpm ~]# yum -y install rpm-build pcre-devel
+
+
+第二步： 规划打包目录
+
+[master@rpm ~]$ cat .rpmacros
+%_topdir  /home/master/rpmbuild
+创建相关目录
+[master@rpm ~]$ mkdir -p ~/rpmbuild/{BUILD,RPMS,SOURCES,SPECS,SRPMS,BUILDROOT}
+目录介绍
+BUILD	编译rpm包的临时目录	%_builddir
+BUILDROOT	编译后生成的软件临时安装目录	%_buildrootdir
+RPMS	最终生成的可安装rpm包的所在目录	%_rpmdir
+SOURCES	所有源代码和补丁文件的存放目录	%_sourcedir
+SPECS	存放SPEC文件的目录(重要)	%_specdir
+SRPMS	软件最终的rpm源码格式存放路径(暂时忽略掉，别挂在心上)	%_srcrpmdir
+
+第三步：收集源码文件
+1）nginx源码
+[master@rpm ~]$ cd rpmbuild/SOURCES/
+[master@rpm SOURCES]$ wget http://nginx.org/download/nginx-1.14.2.tar.gz
+2)准备nginx的配置文件
+3)准备nginx启动脚本
+
+
+第四步：执行
+[master@rpm SPECS]$ rpmbuild -ba nginx.spec

@@ -1,0 +1,11 @@
+%dir /usr/lib/debug
+%dir /usr/lib/debug/.build-id
+%dir /usr/lib/debug/.build-id/24
+%dir /usr/lib/debug/opt
+%dir /usr/lib/debug/opt/websuite
+%dir /usr/lib/debug/opt/websuite/nginx
+%dir /usr/lib/debug/opt/websuite/nginx/sbin
+/usr/lib/debug/.build-id/24/a484d5e1d9c6e761908be9e1d744cc34fa4990
+/usr/lib/debug/.build-id/24/a484d5e1d9c6e761908be9e1d744cc34fa4990.debug
+/usr/lib/debug/opt/websuite/nginx/sbin/nginx.debug
+/usr/src/debug/nginx-1.14.2
